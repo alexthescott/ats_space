@@ -1,0 +1,60 @@
+body {
+  background-color: #1b3756;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#alex_head_shot{
+  width:300px;
+  height:300px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+#me_page_my_name{
+  margin: 5px 0px -5px 0px;
+  text-align: center;
+  font-family: roboto, sans-serif;
+  font-size: 300%;
+  color: whitesmoke;
+}
+
+#me_page_city{
+  margin: 5px 0px 0px 0px;
+  text-align: center;
+  font-family: roboto, sans-serif;
+  font-weight: lighter;
+  font-size: large;
+  color: whitesmoke;
+}
+
+#me_page_bio{
+  font-size: 160%;
+  font-family: roboto, sans-serif;
+  line-height: 1.4;
+  text-align: justify;
+  margin: 20px 20px 20px 20px;
+  color: whitesmoke;
+}
+
+.page_icon{
+  width: 30px;
+  height: 30px;
+  margin: 8px 5px 0px 5px;
+  fill: whitesmoke;
+  color: whitesmoke;
+}
