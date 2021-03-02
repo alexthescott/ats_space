@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/alexthescott.space/static/css/main.f1624594.chunk.css",
-    "main.js": "/alexthescott.space/static/js/main.bfe941aa.chunk.js",
-    "main.js.map": "/alexthescott.space/static/js/main.bfe941aa.chunk.js.map",
-    "runtime-main.js": "/alexthescott.space/static/js/runtime-main.bf89669f.js",
-    "runtime-main.js.map": "/alexthescott.space/static/js/runtime-main.bf89669f.js.map",
-    "static/js/2.810018a4.chunk.js": "/alexthescott.space/static/js/2.810018a4.chunk.js",
-    "static/js/2.810018a4.chunk.js.map": "/alexthescott.space/static/js/2.810018a4.chunk.js.map",
-    "static/js/3.50ba29df.chunk.js": "/alexthescott.space/static/js/3.50ba29df.chunk.js",
-    "static/js/3.50ba29df.chunk.js.map": "/alexthescott.space/static/js/3.50ba29df.chunk.js.map",
-    "index.html": "/alexthescott.space/index.html",
-    "static/css/main.f1624594.chunk.css.map": "/alexthescott.space/static/css/main.f1624594.chunk.css.map",
-    "static/js/2.810018a4.chunk.js.LICENSE.txt": "/alexthescott.space/static/js/2.810018a4.chunk.js.LICENSE.txt",
-    "static/media/alex_0.806e3028.JPG": "/alexthescott.space/static/media/alex_0.806e3028.JPG",
-    "static/media/email-icon.4f0cdf55.svg": "/alexthescott.space/static/media/email-icon.4f0cdf55.svg",
-    "static/media/spotify-icon.19e64ef7.svg": "/alexthescott.space/static/media/spotify-icon.19e64ef7.svg"
+    "main.css": "/static/css/main.653bb6bb.chunk.css",
+    "main.js": "/static/js/main.abe96318.chunk.js",
+    "main.js.map": "/static/js/main.abe96318.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fba08043.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fba08043.js.map",
+    "static/js/2.4ffe1739.chunk.js": "/static/js/2.4ffe1739.chunk.js",
+    "static/js/2.4ffe1739.chunk.js.map": "/static/js/2.4ffe1739.chunk.js.map",
+    "static/js/3.8e0d2a48.chunk.js": "/static/js/3.8e0d2a48.chunk.js",
+    "static/js/3.8e0d2a48.chunk.js.map": "/static/js/3.8e0d2a48.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.653bb6bb.chunk.css.map": "/static/css/main.653bb6bb.chunk.css.map",
+    "static/js/2.4ffe1739.chunk.js.LICENSE.txt": "/static/js/2.4ffe1739.chunk.js.LICENSE.txt",
+    "static/media/alex_0.806e3028.JPG": "/static/media/alex_0.806e3028.JPG",
+    "static/media/email-icon.a15fd363.svg": "/static/media/email-icon.a15fd363.svg",
+    "static/media/github-icon.3200bb12.svg": "/static/media/github-icon.3200bb12.svg",
+    "static/media/linkedin-icon.64e4e7e5.svg": "/static/media/linkedin-icon.64e4e7e5.svg",
+    "static/media/spotify-icon.9b95e99b.svg": "/static/media/spotify-icon.9b95e99b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf89669f.js",
-    "static/js/2.810018a4.chunk.js",
-    "static/css/main.f1624594.chunk.css",
-    "static/js/main.bfe941aa.chunk.js"
+    "static/js/runtime-main.fba08043.js",
+    "static/js/2.4ffe1739.chunk.js",
+    "static/css/main.653bb6bb.chunk.css",
+    "static/js/main.abe96318.chunk.js"
   ]
 }
