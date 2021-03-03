@@ -7,12 +7,13 @@ import linkedin_icon from './static/icons/linkedin-icon.svg';
 import email_icon from './static/icons/email-icon.svg';
 import spotify_icon from './static/icons/spotify-icon.svg';
 
-import {Typography, Grid, Container} from '@material-ui/core';
+import {Typography, Grid} from '@material-ui/core';
+import { sizing } from '@material-ui/system'
 import Typed from 'react-typed';
 
 function draw_my_info(){
   return(
-    <Grid container xs="3" justify="flex-start" direction="column" style={{'maxWidth':'225px'}}>
+    <Grid container xs="3" justify="flex-start" direction="column" style={{'maxWidth':'225px', 'height':'100%', 'backgroundColor':'black'}}>
       <Grid item spacing={2}>
         <img id="alex_head_shot" src={alex_photo} alt="Alex holding his cat Blake"></img>
         <Typography
@@ -73,7 +74,7 @@ function App() {
       direction="row"
       justify="flex-start"
       spacing="0"
-      height="100%"
+      style={{'height':'100%'}}
       >
       {draw_my_info()}
       <Grid item xs="9">
