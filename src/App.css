@@ -2,13 +2,9 @@ body {
   background-color: #1b3756;
 }
 
-.App {
-  height: 100%;
-}
-
 #alex_head_shot{
-  width:125px;
-  height:125px;
+  width:135px;
+  height:135px;
   border-radius: 50%;
   display: block;
   margin-left: auto;
@@ -20,16 +16,7 @@ body {
 #me_page_my_name{
   margin: 2px 0px 2px 2px;
   font-family: roboto, sans-serif;
-  font-size: 135%;
-  color: whitesmoke;
-}
-
-#me_page_city{
-  margin: 5px 0px -5px 5px;
-  text-align: center;
-  font-family: roboto, sans-serif;
-  font-weight: lighter;
-  font-size: large;
+  font-size: 200%;
   color: whitesmoke;
 }
 
@@ -38,15 +25,20 @@ body {
   line-height: 1.4;
   text-align: left;
   font-size: 125%;
-  margin: 20px 15px 20px 45px;
   color: whitesmoke;
 }
 
 .page_icon{
-  width: 20px;
-  height: 20px;
-  margin: 8px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  margin: 8px 5px 0px 5px;
   cursor: pointer;
   fill: whitesmoke;
   color: whitesmoke;
+}
+
+.page_icon:hover{
+  width: 28px;
+  height: 28px;
+  margin: 6px 3px -2px 3px;
 }

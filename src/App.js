@@ -1,33 +1,50 @@
 import './App.css';
-import React from 'react'
+import React, { Component } from 'react'
+import Typed from 'react-typed';
+import {Typography, Grid, CssBaseline, Container} from '@material-ui/core';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 
 import draw_side_nav from './components/side_bar'
+import StickyFooter from './components/footer'
 
-import {Typography, Grid} from '@material-ui/core';
+// TODO -> Address mobile sized version of this site, putting the side_nav bar @ the top
 
-function App() {
+const useStyles = makeStyles((theme) => ({
+  root: { 
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    backgroundColor: '#1b3756',
+  },
+  main: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
+  },
+}));
+
+
+
+export default function App() {
+  const classes = useStyles()
+
   return (
-    <div className="App"> 
-      <Grid
-      container
-      direction="row"
-      justify="flex-start"
-      xs={12}
-      style={{'height':'100%'}}
-      >
-      {draw_side_nav()}
-      <Grid item xs={10} spacing={2}>
-        <div style={{'max-width': '1000px'}}>
-          <p id="me_page_bio">
-            Howdy 👋🏻! My name is Alex, and I am a programmer, music enthusiast and runner. In 2020, I graduated from UCSC
-            with a BS in Computer Science. I currently work for iDTech as an online private instructor, and am looking to start
-            my professional programming career. My long term interests lie in the intersection of music and technology.
-          </p>
-        </div>
-      </Grid>
-    </Grid>
+    <div className={classes.root}> 
+      <CssBaseline/>
+        <Container component="main" className={classes.main} maxWidth="sm">
+          <Typography
+            variant='h6'
+            id="me_page_my_name">
+            <b>A</b>
+              <Typed 
+              strings={["<b>lex</b>", "<b>lex Scott</b>"]} 
+              typeSpeed={85}
+              showCursor={false}
+              backDelay={10}
+              style={{'color':'white', 'weight':'bold'}}
+              ></Typed>
+          </Typography>
+        </Container>
+      <StickyFooter/>
     </div>
-  );
+  )
 }
-
-export default App;

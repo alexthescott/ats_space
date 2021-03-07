@@ -5,12 +5,13 @@ import email_icon from '../static/icons/email-icon.svg';
 import spotify_icon from '../static/icons/spotify-icon.svg';
 
 import {Typography, Grid, Paper} from '@material-ui/core';
+import { sizing } from '@material-ui/system';
 import Typed from 'react-typed';
 
 function draw_side_nav(){
 	return(
-	  <Grid container xs='2' justify="flex-start" direction="column" style={{'height':'100%', 'textAlign':'center'}}>
-		<Paper square={true} elevation={5}  style={{'height':'100%', 'backgroundColor':'#15283d'}}>
+	  <Grid id="side_nav_container" container xs={12} sm={2} justify="flex-start" direction="column" style={{'textAlign':'center'}}>
+		<Paper square={true} elevation={5} style={{'height':'100%', 'backgroundColor':'#15283d'}}>
 		  <Grid item spacing={2}>
 			<img id="alex_head_shot" src={alex_photo} alt="Alex holding his cat Blake"></img>
 		  </Grid>
@@ -20,9 +21,10 @@ function draw_side_nav(){
 			  id="me_page_my_name">
 			  <b>A</b>
 				<Typed 
-				strings={["<b>lex Scott</b>"]} 
-				typeSpeed={35}
+				strings={["<b>lex</b>", "<b>lex Scott</b>"]} 
+				typeSpeed={85}
 				showCursor={false}
+				backDelay={10}
 				style={{'color':'white', 'weight':'bold'}}
 				></Typed>
 			</Typography>
