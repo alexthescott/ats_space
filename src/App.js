@@ -17,12 +17,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#1b3756',
   },
   main: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(2),
+    padding: theme.spacing(2)
   },
 }));
-
-
 
 export default function App() {
   const classes = useStyles()
@@ -43,6 +40,14 @@ export default function App() {
               style={{'color':'white', 'weight':'bold'}}
               ></Typed>
           </Typography>
+        </Container>
+        <Container maxWidth="sm">
+          <p id="me_page_bio">
+            👋🏻 Howdy! I am a programmer, music enthusiast 
+            and runner, and in 2020, I graduated from UCSC with a BS in Computer 
+            Science. I currently work for iDTech as an online private instructor,
+            and am excited to start my professional programming career. 
+          </p>
         </Container>
       <StickyFooter/>
     </div>

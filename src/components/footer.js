@@ -12,7 +12,7 @@ import spotify_icon from '../static/icons/spotify-icon.svg';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    padding: theme.spacing(3, 2),
+    padding: theme.spacing(2),
     marginTop: 'auto',
     backgroundColor: '#15283d'
   },
@@ -39,15 +39,15 @@ export default function StickyFooter() {
           </img>
           <img 
             class="page_icon"
-            src={email_icon}
-            alt="email icon"
-            onClick={() => openNewTab("mailto:atscott@ucsc.edu")}>
-          </img>
-          <img 
-            class="page_icon"
             src={spotify_icon}
             alt="spotify icon"
             onClick={() => openNewTab("https://open.spotify.com/user/bassguitar1234")}>
+          </img>
+          <img 
+            class="page_icon"
+            src={email_icon}
+            alt="email icon"
+            onClick={() => openNewTab("mailto:atscott@ucsc.edu")}>
           </img>
           </div>
         </Container>
