@@ -61,7 +61,7 @@ export default function sketch(p){
       this.ripples = [];
       this.speed = 0.25;
       this.max_size = 2.25 * Math.sqrt((p.width * p.width) + (p.height * p.height));
-      this.spawn_rate = 4; // measured in seconds
+      this.spawn_rate = 6; // measured in seconds
 
       var ripple_gap = this.speed * this.spawn_rate * 60;
       var num_of_ripples = 1 + this.max_size / ripple_gap;

@@ -29,9 +29,9 @@ function getSketch(){
   console.log(sketch_index)
 
   if (sketch_index === 0){
-    return (<Grid item xs={12}><P5Wrapper sketch={tiny_noise}></P5Wrapper></Grid>)
+    return (<Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={tiny_noise}></P5Wrapper></Grid>)
   } else{
-    return <Grid item xs={12}><P5Wrapper sketch={pond_water}></P5Wrapper></Grid>
+    return <Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={pond_water}></P5Wrapper></Grid>
   }
 }
 
@@ -56,7 +56,7 @@ export default function App() {
               ]} 
               typeSpeed={75}
               showCursor={true}
-              backDelay={1000}
+              backDelay={1250}
               backSpeed={60}
               smartBackspace={true}
               loop={true}
@@ -66,27 +66,18 @@ export default function App() {
           </Typography>
         </Container>
         <Container maxWidth="sm">
-          <Grid container>
+          <Grid container spacing={2} justify="center" alignItems="center">
             {getSketch()}
             <Grid item xs={12}>
-              {/* 
+              {/*             */}
             <p id="me_page_bio">
-            👋🏻 Howdy! I am a programmer, music enthusiast 
-            and runner, and in 2020, I graduated from UCSC with a BS in Computer 
-            Science. I currently work for iDTech as an online private instructor,
-            and am excited to start my professional programming career. 
+            👋🏻 Howdy! I currently work for iDTech as an online private instructor,
+            and am excited to start my professional programming career. Check out some
+            of the links below, send me an email, or refresh the page for a new random doodle!
             </p>
-            */}
-          </Grid>
-          </Grid>
-          {/*           <p id="me_page_bio">
-            👋🏻 Howdy! I am a programmer, music enthusiast 
-            and runner, and in 2020, I graduated from UCSC with a BS in Computer 
-            Science. I currently work for iDTech as an online private instructor,
-            and am excited to start my professional programming career. 
-          </p>
-          */}
 
+          </Grid>
+          </Grid>
         </Container>
       <StickyFooter/>
     </div>

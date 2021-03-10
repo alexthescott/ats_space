@@ -15,7 +15,7 @@ export default function sketch(p){
   var palette_choice = Math.floor(Math.random() * palettes.length);
   var palette = palettes[palette_choice];
 
-  var cell_size = 4;
+  var cell_size = 8;
   var noise_const = 0.05;
   var time = 0;
   var time_vel = 0.5;
@@ -28,7 +28,7 @@ export default function sketch(p){
     canvas = p.createCanvas(400, 400);
     p.noiseDetail(3);
     p.noStroke();
-    slant = p.map(p.random(0, 1), 0, 1, -1.5, 1.5);
+    slant = p.map(p.random(0, 1), 0, 1, -1.25, 1.25);
     slant == 0 ? slant = 1 : slant = slant;
   }
 
@@ -36,15 +36,16 @@ export default function sketch(p){
     p.background(palette[0]);
     let x_grid = p.width / cell_size;
     let y_grid = p.height / cell_size;
+
+    var x_cir = p.cos(time);
+    var y_cir = p.sin(time);
   
     for (let x = 0; x < x_grid; x++) {
       for (let y = 0; y < y_grid; y++) {
         var x_off = x * noise_const / slant;
         var y_off = y * noise_const * slant;
-  
-        var x_cir = p.cos(time);
-        var y_cir = p.sin(time);
-        var c = p.noise(x_off, y_off, x_cir + y_cir);
+        
+        var c = p.noise(x_off, y_off, time);
   
         if (c >= 0.55) {
           p.fill(palette[1]);
