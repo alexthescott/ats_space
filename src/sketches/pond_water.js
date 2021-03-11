@@ -18,7 +18,7 @@ export default function sketch(p){
   var bg;
   var ripple_color;
 
-  if(bg_flip == 0){;
+  if(bg_flip === 0){;
   bg = palette[0];
   ripple_color = palette[1];
   } else{
@@ -35,7 +35,7 @@ export default function sketch(p){
   p.setup = () => {
     canvas = p.createCanvas(400, 400);
     for(var i = 0; i < 4; i++){
-      if (i != avoid_pos){
+      if (i !== avoid_pos){
         ripples.push(new ripple(i));
       }
     }
@@ -72,13 +72,13 @@ export default function sketch(p){
       }
 
       // decide corner 
-      if (pos == 0){
+      if (pos === 0){
         this.x = -p.width/10;
         this.y = -p.height/10;
-      } else if (pos == 1){
+      } else if (pos === 1){
         this.x = p.width + p.width/10;
         this.y = -p.height/10;
-      } else if (pos == 2){
+      } else if (pos === 2){
         this.x = -p.width/10;
         this.y = p.height + p.height/10;
       } else{
@@ -89,7 +89,7 @@ export default function sketch(p){
 
     draw(){
       // spawn new ripples at a regular frequency
-      if (p.frameCount % (this.spawn_rate * 60) == 0){
+      if (p.frameCount % (this.spawn_rate * 60) === 0){
         this.ripples.push(0);
       }
 
