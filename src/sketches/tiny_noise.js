@@ -41,8 +41,8 @@ export default function sketch(p){
     var y_cir = p.sin(time);
   
     for (let x = 0; x < x_grid; x++) {
+      var x_off = x * noise_const / slant;
       for (let y = 0; y < y_grid; y++) {
-        var x_off = x * noise_const / slant;
         var y_off = y * noise_const * slant;
         
         var c = p.noise(x_off, y_off, time);

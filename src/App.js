@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 function getSketch(){
   // choose and return a grid item containing a p5.js sketch found in ./src/sketches
   var sketch_count = 3;
-  var sketch_index = Math.round(Math.random(0, 1) * (sketch_count-1))
+  var sketch_index = Math.floor(Math.random(0, 1) * (sketch_count-1))
 
   if (sketch_index === 0){
     return (<Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={tiny_noise}></P5Wrapper></Grid>)
@@ -51,10 +51,11 @@ export default function App() {
             id="me_page_my_name">
               <Typed 
               strings={[
+                "<b>Alex Scott </b>",
                 "<b>Alex Scott,</b> UCSC Grad", 
-                "<b>Alex Scott, </b> Programmer",
-                "<b>Alex Scott, </b> Music Nerd",
-                "<b>Alex Scott, </b> Runner",
+                "<b>Alex Scott, </b> programmer",
+                "<b>Alex Scott, </b> music nerd",
+                "<b>Alex Scott, </b> runner",
                 "<b>Alex Scott </b>"
               ]} 
               typeSpeed={75}

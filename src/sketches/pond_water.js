@@ -89,7 +89,7 @@ export default function sketch(p){
 
     draw(){
       // spawn new ripples at a regular frequency
-      if (p.frameCount % (this.spawn_rate * 60) === 0){
+      if ((p.frameCount % (this.spawn_rate * 60)) === 0){
         this.ripples.push(0);
       }
 
