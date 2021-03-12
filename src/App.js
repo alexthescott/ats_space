@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 function getSketch(){
   // choose and return a grid item containing a p5.js sketch found in ./src/sketches
   var sketch_count = 3;
-  var sketch_index = Math.floor(Math.random(0, 1) * (sketch_count-1))
+  var sketch_index = Math.floor(Math.random(0, 1) * (sketch_count))
 
   if (sketch_index === 0){
     return (<Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={tiny_noise}></P5Wrapper></Grid>)
