@@ -1,9 +1,5 @@
 import React from 'react'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
-import { minHeight } from '@material-ui/system'
+import { makeStyles, Container } from '@material-ui/core'
 
 import github_icon from '../static/icons/github-icon.svg';
 import linkedin_icon from '../static/icons/linkedin-icon.svg';

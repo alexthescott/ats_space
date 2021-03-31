@@ -19,26 +19,22 @@ export default function sketch(p){
   var noise_const = 0.05;
   var time = 0;
   var time_vel = 0.5;
-  var time_frailty = 3; // how much should time move noise?
   var slant;
-
-  var canvas;
   
   p.setup = () => {
-    canvas = p.createCanvas(400, 400);
+    p.createCanvas(400, 400);
     p.noiseDetail(3);
     p.noStroke();
     slant = p.map(p.random(0, 1), 0, 1, -1.25, 1.25);
-    slant == 0 ? slant = 1 : slant = slant;
+    if (slant === 0){
+      slant = 1;
+    }
   }
 
   p.draw = () => {
     p.background(palette[0]);
     let x_grid = p.width / cell_size;
     let y_grid = p.height / cell_size;
-
-    var x_cir = p.cos(time);
-    var y_cir = p.sin(time);
   
     for (let x = 0; x < x_grid; x++) {
       var x_off = x * noise_const / slant;

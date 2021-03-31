@@ -1,19 +1,21 @@
 // http://www.emohr.com/manfred7.html -> early algorithms, random_walk
 
 export default function sketch(p){
+  var bg;
+  var line_color;
+
   if (getRandomInt(0, 1) === 1){
-    var bg = 255;
-    var line_color = 0;
+    bg = 255;
+    line_color = 0;
   } else{
-    var bg = 0;
-    var line_color = 255;
+    bg = 0;
+    line_color = 255;
   }
 
   var walker;
-  var canvas;
 
   p.setup = () => {
-    canvas = p.createCanvas(400, 400);
+    p.createCanvas(400, 400);
     walker = new random_walk();
     p.frameRate(20)
     p.strokeCap(p.SQUARE);
@@ -109,13 +111,13 @@ export default function sketch(p){
           this.orientation = 0;
         }
         this.steps--;
-      } else if (this.steps > -100){
-      // hold drawing
-      this.steps--
-    } else{
-      this.steps = 100;
-      this.points = [[this.front_x, this.front_y]];
-    }
+        } else if (this.steps > -100){
+        // hold drawing
+        this.steps--
+      } else{
+        this.steps = 100;
+        this.points = [[this.front_x, this.front_y]];
+      }
     }
   }
 

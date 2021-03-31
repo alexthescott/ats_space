@@ -30,10 +30,8 @@ export default function sketch(p){
   var avoid_pos = Math.floor(Math.random() * 4);
   var ripples = [];
 
-  var canvas;
-
   p.setup = () => {
-    canvas = p.createCanvas(400, 400);
+    p.createCanvas(400, 400);
     for(var i = 0; i < 4; i++){
       if (i !== avoid_pos){
         ripples.push(new ripple(i));

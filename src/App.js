@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Component } from 'react'
+import React from 'react'
 import Typed from 'react-typed';
 import {Typography, Grid, CssBaseline, Container} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
@@ -54,13 +54,14 @@ export default function App() {
                 "<b>Alex Scott </b>",
                 "<b>Alex Scott,</b> UCSC Grad", 
                 "<b>Alex Scott, </b> programmer",
+                "<b>Alex Scott, </b> computer enthusiast",
                 "<b>Alex Scott, </b> music nerd",
                 "<b>Alex Scott, </b> runner",
                 "<b>Alex Scott </b>"
               ]} 
               typeSpeed={75}
               showCursor={true}
-              backDelay={1250}
+              backDelay={1750}
               backSpeed={60}
               smartBackspace={true}
               loop={true}
@@ -75,8 +76,7 @@ export default function App() {
             <Grid item xs={12}>
               {/*             */}
             <p id="me_page_bio">
-            👋🏻 Howdy! I currently work for iDTech as an online private instructor,
-            and am excited to start my professional programming career. Check out some
+            👋🏻 Howdy! I currently work for iDTech as an online private instructor. Check out some
             of the links below, send me an email, or refresh the page for a new random doodle!
             </p>
           </Grid>
