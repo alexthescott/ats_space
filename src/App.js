@@ -10,6 +10,7 @@ import P5Wrapper from 'react-p5-wrapper'
 import tiny_noise from '../src/sketches/tiny_noise.js'
 import pond_water from '../src/sketches/pond_water.js'
 import random_walk from '../src/sketches/random_walk.js'
+import concentric_shuffle from '../src/sketches/concentric_shuffle'
 
 // TODO -> Address mobile sized version of this site, putting the side_nav bar @ the top
 
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
 function getSketch(){
   // choose and return a grid item containing a p5.js sketch found in ./src/sketches
-  var sketch_count = 3;
+  var sketch_count = 4;
   var sketch_index = Math.floor(Math.random(0, 1) * (sketch_count))
 
   if (sketch_index === 0){
@@ -36,6 +37,8 @@ function getSketch(){
     return <Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={pond_water}></P5Wrapper></Grid>
   } else if (sketch_index === 2){
     return <Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={random_walk}></P5Wrapper></Grid>
+  } else if (sketch_index === 3){
+    return <Grid item style={{textAlign:'center'}} xs={12}><P5Wrapper sketch={concentric_shuffle}></P5Wrapper></Grid>
   }
 }
 
