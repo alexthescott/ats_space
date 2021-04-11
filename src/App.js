@@ -76,13 +76,6 @@ export default function App() {
         <Container maxWidth="sm">
           <Grid container spacing={2} justify="center" alignItems="center">
             {getSketch()}
-            <Grid item xs={12}>
-              {/*             */}
-            <p id="me_page_bio">
-            👋🏻 Howdy! I currently work for iDTech as an online private instructor. Check out some
-            of the links below, send me an email, or refresh the page for a new random doodle!
-            </p>
-          </Grid>
           </Grid>
         </Container>
       <StickyFooter/>
