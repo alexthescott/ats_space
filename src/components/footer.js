@@ -5,6 +5,7 @@ import github_icon from '../static/icons/github-icon.svg';
 import linkedin_icon from '../static/icons/linkedin-icon.svg';
 import email_icon from '../static/icons/email-icon.svg';
 import spotify_icon from '../static/icons/spotify-icon.svg';
+import twitter_icon from '../static/icons/twitter-icon.svg';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -21,38 +22,43 @@ export default function StickyFooter() {
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <div>
-          <img 
-            class="page_icon" 
-            src={github_icon} 
-            alt="github icon"
-            onClick={() => openNewTab("https://github.com/alexthescott")}>
-          </img>
-          <img 
-            class="page_icon" 
-            src={linkedin_icon} 
-            alt="linkedin icon"
-            onClick={() => openNewTab("https://www.linkedin.com/in/alex-scott-b1a591152/")}>
-          </img>
-          <img 
-            class="page_icon"
-            src={spotify_icon}
-            alt="spotify icon"
-            onClick={() => openNewTab("https://open.spotify.com/user/bassguitar1234")}>
-          </img>
-          <img 
-            class="page_icon"
-            src={email_icon}
-            alt="email icon"
-            onClick={() => openNewTab("mailto:atscott@ucsc.edu")}>
-          </img>
+            <a href="https://github.com/alexthescott" target="_blank" rel="noopener noreferrer">
+              <img 
+                class="page_icon" 
+                src={github_icon} 
+                alt="github icon">
+              </img>
+            </a>
+            <a href="https://www.linkedin.com/in/alexthescott/" target="_blank" rel="noopener noreferrer">
+              <img 
+                class="page_icon" 
+                src={linkedin_icon} 
+                alt="linkedin icon">
+              </img>
+            </a>
+            <a href="https://open.spotify.com/user/bassguitar1234" target="_blank" rel="noopener noreferrer">
+              <img 
+                class="page_icon"
+                src={spotify_icon}
+                alt="spotify icon">
+              </img>
+            </a>
+            <a href="https://twitter.com/mralexthescott" target="_blank" rel="noopener noreferrer">
+              <img 
+                class="page_icon"
+                src={twitter_icon}
+                alt="twitter icon">
+              </img>
+            </a>
+            <a href="mailto:atscott@ucsc.edu" target="_blank" rel="noopener noreferrer">
+              <img 
+                class="page_icon"
+                src={email_icon}
+                alt="email icon">
+              </img>
+            </a>
           </div>
         </Container>
       </footer>
   )
-}
-
-function openNewTab(url){
-  console.log("opening ", url, "in a new tab");
-  var win = window.open(url);
-  win.focus();
 }
