@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(2),
     marginTop: 'auto',
-    backgroundColor: '#15283d'
+    backgroundColor: '#000'
   },
 }));
 
@@ -43,7 +43,7 @@ export default function StickyFooter() {
                 alt="spotify icon">
               </img>
             </a>
-            <a href="https://twitter.com/mralexthescott" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/alexthescott" target="_blank" rel="noopener noreferrer">
               <img 
                 class="page_icon"
                 src={twitter_icon}
