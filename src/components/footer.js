@@ -6,6 +6,7 @@ import linkedin_icon from '../static/icons/linkedin-icon.svg';
 import email_icon from '../static/icons/email-icon.svg';
 import spotify_icon from '../static/icons/spotify-icon.svg';
 import twitter_icon from '../static/icons/twitter-icon.svg';
+import hen_icon from '../static/icons/hen-icon.svg';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -48,6 +49,13 @@ export default function StickyFooter() {
                 class="page_icon"
                 src={twitter_icon}
                 alt="twitter icon">
+              </img>
+            </a>
+            <a href="https://www.hicetnunc.xyz/alexthescott/creations" target="_blank" rel="noopener noreferrer">
+              <img 
+                class="hen_icon"
+                src={hen_icon}
+                alt="hic et nunc icon">
               </img>
             </a>
             <a href="mailto:atscott@ucsc.edu" target="_blank" rel="noopener noreferrer">

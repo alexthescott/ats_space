@@ -24,6 +24,24 @@
   color: whitesmoke;
 }
 
+.hen_icon{
+  width: 60px;
+  height: 26px;
+  margin: 15px 5px -1px 3px;
+  cursor: pointer;
+  fill: whitesmoke;
+  color: whitesmoke;
+}
+
+.hen_icon:hover{
+  width: 64px;
+  height: 30px;
+  margin: 13px 3px -3px 1px;
+  cursor: pointer;
+  fill: whitesmoke;
+  color: whitesmoke;
+}
+
 .page_icon{
   width: 24px;
   height: 24px;
