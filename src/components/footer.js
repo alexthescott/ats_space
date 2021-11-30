@@ -51,7 +51,7 @@ export default function StickyFooter() {
                 alt="twitter icon">
               </img>
             </a>
-            <a href="https://www.hicetnunc.xyz/alexthescott/creations" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.hicetnunc.art/alexthescott/creations" target="_blank" rel="noopener noreferrer">
               <img 
                 class="hen_icon"
                 src={hen_icon}
