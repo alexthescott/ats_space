@@ -4,5 +4,8 @@
   },
   "dependencies": {
     "typed.js": "^2.0.12"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d src"
   }
 }
