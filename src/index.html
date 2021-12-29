@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.0"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=alexthescott"></script>
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+    integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
   <script>
@@ -19,45 +20,43 @@
   <link rel="icon" href="res/logo192.png" rel="image/x-icon">
   <title>alexthescott</title>
 </head>
+
 <body class="mt-2 bg-black text-white font-sans max-w-lg">
-  <div id="typed-strings">
-    <p><b>Alex Scott</b>, UCSC Grad</p>
-    <p><b>Alex Scott</b>, competent programmer</p>
-    <p><b>Alex Scott</b>, computer enthusiast</p>
-    <p><b>Alex Scott</b>, music nerd</p>
-    <p><b>Alex Scott</b>, runner</p>
-    <p><b>Alex Scott</b></p>
-  </div>
-  <span id="typed" class="m-4 text-3xl"><b>Alex Scott</b></span>
-  <div>
-  <script>
-    var typed = new Typed('#typed', {
-      stringsElement: '#typed-strings',
-      preStringTyped: 1,
-      typeSpeed: 75,
-      showCursor: false,
-      startDelay: 1750,
-      backDelay: 1750,
-      backSpeed: 60,
-      smartBackspace: true,
-      loop: true,
-      loopCount: 3
-    });
-  </script>
+  <div class="m-4">
+    <div id="typed-strings">
+      <p><b>Alex Scott</b>, UCSC Grad</p>
+      <p><b>Alex Scott</b>, competent programmer</p>
+      <p><b>Alex Scott</b>, computer enthusiast</p>
+      <p><b>Alex Scott</b>, music nerd</p>
+      <p><b>Alex Scott</b>, runner</p>
+      <p><b>Alex Scott</b></p>
+    </div>
+    <span id="typed" class="text-3xl"><b>Alex Scott</b></span>
+    <div>
+      <script>
+        var typed = new Typed('#typed', {
+          stringsElement: '#typed-strings',
+          loop: true,
+          preStringTyped: 1,
+          typeSpeed: 75,
+          showCursor: false,
+          startDelay: 1750,
+          backDelay: 1750,
+          backSpeed: 60,
+          smartBackspace: true,
+          loopCount: 3
+        });
+      </script>
 
-  <div class="m-4 text-justify"><span>I am a 23 year old programmer making sketches with 
-    <a href="https://openprocessing.org/user/259116?view=sketches" class="hyperlink">Processing</a> and 
-    <a href="https://hicetnunc.art/alexthescott" class="hyperlink">Pico-8</a>. In 2020 I made
-    a <a href="https://github.com/alexthescott/ePaper-Spotify-Clock" class="hyperlink">Spotify ePaper Clock</a> using a Raspberry Pi and Python.
-    I'm focused on writing whimsicle software, and algorithmic art with long term aspirations of writing audio software pulgins.
-  </span></div>
-
-  <div id='sketch' class="m-4 flex flex-col justify-center items-center"></div>
-  <script src="./res/sketches/choose_sketch.js"></script>
+      <div class="my-4 flex flex-col items-center">
+        <div class="" id='sketch'></div>
+      </div>
+      <script src="./res/sketches/choose_sketch.js"></script>
+    </div>
+    <a href="./pages/about.html" class="hyperlink transition-opacity">About Me</a>
   </div>
-  
-  <div class="w-screen absolute bottom-0 bg-slate-900">
-    <div class = "m-4 flex flex-row">
+  <div class="w-screen mb absolute bottom-0 bg-slate-900/25">
+    <div class="m-4 flex flex-row">
       <a href="https://github.com/alexthescott" target="_blank" rel="noopener noreferrer">
         <img src="res/icons/github-icon.svg" class="page_icon"></img>
       </a>
@@ -76,8 +75,10 @@
       <a href="mailto:atscott@ucsc.edu" target="_blank" rel="noopener noreferrer">
         <img src="res/icons/email-icon.svg" class="page_icon"></img>
       </a>
-    <div>
-  </div>
-  </div>
+      <div>
+      </div>
+    </div>
+
 </body>
+
 </html>

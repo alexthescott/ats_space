@@ -2,4 +2,5 @@ Simple personal website with a single random p5.js sketch, and links to the  var
 - [typed.js](https://github.com/mattboldt/typed.js/)
 - [p5.js](https://p5js.org/)
 - [tailwind css](https://tailwindcss.com/docs/)
+- [heroicons](https://heroicons.com/)
 - [gh-pages](https://github.com/tschaub/gh-pages)

@@ -7,6 +7,9 @@
     @apply w-6 h-6 mr-2 hover:animate-pulse
   }
   .hyperlink{
-    @apply font-bold underline
+    @apply font-bold underline hover:animate-pulse
+  }
+  .nav_icon{
+    @apply hover:animate-pulse
   }
 }
