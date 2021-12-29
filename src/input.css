@@ -6,4 +6,7 @@
   .page_icon {
     @apply w-6 h-6 mr-2 hover:animate-pulse
   }
+  .hyperlink{
+    @apply font-bold underline
+  }
 }
