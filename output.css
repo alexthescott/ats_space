@@ -463,9 +463,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 2rem;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .mb-2 {
