@@ -1,17 +1,34 @@
 <!doctype html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D3GB85S48Y');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/src/output.css" rel="stylesheet">
-  <link rel="icon" href="/src/res/logo192.png" rel="image/x-icon">
+  <link rel="icon" href="res/logo192.png" rel="image/x-icon">
+  <title>alexthescott.about</title>
 </head>
-<body class="m-8 bg-black text-white font-sans">
-  <h1 class="text-3xl font-semibold">
-    alexthescott
-  </h1>
-  <div>
-    Alex Scott is a big fat nerd!
+<body class="mt-2 bg-black text-white font-sans max-w-lg">
+  <div class="flex flex-row justify-left">
+    <a href="../index.html" class="ml-4 nav_icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg></a>
+    <h1 class="m-5 text-3xl">alexthescott</h1>
   </div>
+  <div class="m-4 mt-0 text-justify"><span>Oh hey! Didn't see you there. My name is Alex and I am a 23 year old programmer
+      sketching with <a href="https://openprocessing.org/user/259116?view=sketches" class="hyperlink">Processing</a> and
+      <a href="https://hicetnunc.art/alexthescott" class="hyperlink">Pico-8</a>. In 2020 I made a 
+      <a href="https://github.com/alexthescott/ePaper-Spotify-Clock" class="hyperlink">Spotify ePaper Clock</a> using a
+      Raspberry Pi and Python.
+  </span></div>
 </body>
 </html>
