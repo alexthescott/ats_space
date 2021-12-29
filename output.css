@@ -483,6 +483,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -514,6 +519,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-0 {
   margin-top: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .flex {
@@ -558,6 +567,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center {
   align-items: center;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .border {
@@ -606,13 +619,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:animate-pulse:hover {
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@media (min-width: 640px) {
-  .sm\:items-start {
-    align-items: flex-start;
-  }
-} animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @media (min-width: 640px) {
