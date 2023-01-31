@@ -72,16 +72,6 @@ function draw() {
   start += radians(inc);
 }
 
-function mouseClicked() {
-  noiseSeed(frameCount);
-  var temp_choice = palette_choice;
-  palette_choice = Math.floor(Math.random() * palettes.length);
-  while (palette_choice == temp_choice) {
-    palette_choice = Math.floor(Math.random() * palettes.length);
-  }
-  palette = palettes[palette_choice];
-}
-
 function randint(min, max) {
   // min and max should are inclusive
   return Math.floor(Math.random() * Math.floor(1 + max - min)) + min;
