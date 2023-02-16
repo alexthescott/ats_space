@@ -2,7 +2,13 @@ import os
 import requests
 from bs4 import BeautifulSoup
 
-# format readme into img html elmeent
+HOST_LOCAL_CARTS = True
+
+if not os.path.exists("src"): os.mkdir("src")
+if not os.path.exists("src/pages"): os.mkdir("src/pages")
+if not os.path.exists("src/res/carts"): os.mkdir("src/res/carts")
+
+# format readme into img html element
 html_page = requests.get('https://raw.githubusercontent.com/alexthescott/Computational-Art-in-Pico-8/main/README.md') #Make a get request to retrieve the page
 soup = BeautifulSoup(html_page.content, 'html.parser')
 # regular formatting
@@ -17,17 +23,20 @@ for i,cart in enumerate(cart_image_urls):
     if "https" not in cart:
         continue
     cart_url = "{}/{}.png".format(cart,cart.split("/")[-1])
-    img_tag = "<img loading=\"lazy\" src=\"{}\"></img>\n".format(cart_url)
+    cart_name = cart_url.split("/")[-1]
+    if HOST_LOCAL_CARTS:
+      cart_image = requests.get(cart_url).content
+      with open("src/res/carts/{}".format(cart_name), 'wb') as handler:
+        handler.write(cart_image)
+      img_tag = "<img loading=\"lazy\" src=\"{}\"></img>\n".format("../res/carts/{}".format(cart_name))
+    else:
+      img_tag = "<img loading=\"lazy\" src=\"{}\"></img>\n".format(cart_url)
     link_tag = "<a href=\"{}#readme\">{}</a>".format(carts[i], img_tag)
     cart_images.append(link_tag)
 cart_images = "".join(cart_images)
 
-
-if not os.path.exists("src"): os.mkdir("src")
-if not os.path.exists("src/pages"): os.mkdir("src/pages")
 f = open('src/pages/art.html', 'w')
 
-# the html code which will go in the file GFG.html
 html_template = """<!doctype html>
 <html>
 
