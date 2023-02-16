@@ -45,7 +45,7 @@ html_template = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../output.css" rel="stylesheet">
   <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
-  <title>alexthescott.about</title>
+  <title>alexthescott.art</title>
 </head>
 
 <body class="mt-2 bg-black text-white font-sans">
