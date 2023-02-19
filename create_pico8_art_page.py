@@ -4,7 +4,7 @@ import sys
 from bs4 import BeautifulSoup
 
 HOST_LOCAL_CARTS = True
-DOWNLOAD_PICO8_CARTS = True
+DOWNLOAD_PICO8_CARTS = False
 
 # https://gist.github.com/vladignatyev/06860ec2040cb497f0f3
 def progress(count, total, status=''):
@@ -14,6 +14,13 @@ def progress(count, total, status=''):
     bar = '=' * filled_len + '-' * (bar_len - filled_len)
     sys.stdout.write("\033[K" + '\r[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush()
+
+def sterilize_readme_carts(carts):
+  remove_chars = ["\n"," ", ")", "(", "#", "Oct", "Nov", "Aug", "Sep", "Aug", "July", "June", "May", "April", "Mar", "Feb", "Jan", "2021", "2022", "2023"]
+  for c in remove_chars:
+    carts = carts.replace(c,"")
+  carts = carts.split("[]")
+  return [cart for cart in carts if "https" in cart]
 
 def download_cart_images(cart_image_urls):
   for i, cart in enumerate(cart_image_urls):
@@ -38,22 +45,22 @@ def get_cart_image_tags(cart_image_urls, carts):
     cart_images.append(link_tag)
   return cart_images
 
+def create_cart_pages():
+  pass
+
 if __name__ == "__main__":
   # create all directories
   if not os.path.exists("src"): os.mkdir("src")
   if not os.path.exists("src/pages"): os.mkdir("src/pages")
+  if not os.path.exists("src/pages"): os.mkdir("src/pages/carts")
   if not os.path.exists("src/res/carts"): os.mkdir("src/res/carts")
 
   # format readme into img html element
   html_page = requests.get('https://raw.githubusercontent.com/alexthescott/Computational-Art-in-Pico-8/main/README.md') #Make a get request to retrieve the page
   soup = BeautifulSoup(html_page.content, 'html.parser')
   # regular formatting
-  remove_chars = ["\n"," ", ")", "(", "#", "Oct", "Nov", "Aug", "Sep", "Aug", "July", "June", "May", "April", "Mar", "Feb", "Jan", "2021", "2022", "2023"]
-  carts = soup.text
-  for c in remove_chars:
-    carts = carts.replace(c,"")
-  cart_image_urls = carts.replace("github","raw.githubusercontent").replace("tree/","").split("[]")
-  carts = carts.split("[]")
+  carts = sterilize_readme_carts(soup.text)
+  cart_image_urls = [cart.replace("github","raw.githubusercontent").replace("tree/","") for cart in carts]
   if DOWNLOAD_PICO8_CARTS:
     download_cart_images(cart_image_urls)
   cart_images = "".join(get_cart_image_tags(cart_image_urls, carts))
