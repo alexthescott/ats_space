@@ -711,6 +711,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -849,6 +853,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:items-start {
     align-items: flex-start;
+  }
+
+  .sm\:items-center {
+    align-items: center;
   }
 
   .sm\:text-left {

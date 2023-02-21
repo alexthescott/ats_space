@@ -100,8 +100,8 @@ def create_cart_pages(carts, cart_image_urls):
       </div>
 
       <div class="sm:text-left flex flex-col m-4 sm:flex-row mt-0">
-        <div class="flex items-center"> 
-          <iframe src="../res/carts/html/""" + "{}.html".format(cart_name) + """\" height=\"512\" width=\"512\" class="m-5 my-auto"></iframe>
+        <div class="flex items-center sm:items-start"> 
+          <iframe src="../res/carts/html/""" + "{}.html".format(cart_name) + """\" height=\"512\" width=\"512\" class="m-5 overflow-x-auto"></iframe>
         </div>
         <div class="flex items-start overflow-x-auto">
           <pre><code class="language-lua m-4 text-sm">""" + raw_cart_readme +  """</code></pre>
