@@ -1,0 +1,76 @@
+<!doctype html>
+    <html>
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D3GB85S48Y');
+      </script>
+
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <link href="../output.css" rel="stylesheet">
+      <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+      <title>alexthescott.bad_ring</title>
+    </head>
+
+    <body class="mt-2 bg-black text-white font-sans">
+      <div class="flex flex-row justify-left">
+        <a href="../pages/art.html" class="ml-4 nav_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg></a>
+        <h1 class="m-5 text-3xl">alexthescott.bad ring</h1>
+      </div>
+
+      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
+      <iframe src="../res/carts/html/bad_ring.html" height="512" width="512" class="m-5 sm:items-start items-center"></iframe>
+      
+      <pre><code class="language-lua m-5 text-sm overflow-x-auto">-- bad ring
+-- alexthescott
+-- 22/9/30
+
+-- fxhash()
+rng = stat(6)
+if rng == "" then
+rng=tostr(rnd(-1)\1)..","..tostr(1+rnd(3)\1)..","..tostr(rnd(16)\1)..","
+end
+rng_vals = {}
+c_num = ""
+for i=1,#rng do
+ if sub(rng,i,i) != "," then
+  c_num = c_num..sub(rng,i,i)
+ else 
+  add(rng_vals,tonum(c_num))
+  c_num = ""
+ end
+end
+srand(rng_vals[1])
+
+-- tweetcart
+cls()
+r=rnd
+p=srand
+q=poke
+n=cos
+f=0g=r()v=128s=r(-1)p(s)c=r(9)%1+4
+q(0x5f54,0x60)
+for i=0,16 do pal (i,(r(33)-17),1)end
+::_::
+flip()b=(g%9)/2g+=r(.01)
+for i=0,v do
+m=1+n(g/v)\2
+line(64+n(n(g/8-i/v))*32*m,64+n(n(g/v-i/v))*32*m,i/4)
+end
+if(r()>.001)sspr(1,1,v-2,v-2,0,0,v,v)
+goto _
+</code></pre>
+      </div>
+    </body></html>
+    

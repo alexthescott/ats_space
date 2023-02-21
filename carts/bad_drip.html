@@ -1,0 +1,144 @@
+<!doctype html>
+    <html>
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D3GB85S48Y');
+      </script>
+
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <link href="../output.css" rel="stylesheet">
+      <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+      <title>alexthescott.bad_drip</title>
+    </head>
+
+    <body class="mt-2 bg-black text-white font-sans">
+      <div class="flex flex-row justify-left">
+        <a href="../pages/art.html" class="ml-4 nav_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg></a>
+        <h1 class="m-5 text-3xl">alexthescott.bad drip</h1>
+      </div>
+
+      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
+      <iframe src="../res/carts/html/bad_drip.html" height="512" width="512" class="m-5 sm:items-start items-center"></iframe>
+      
+      <pre><code class="language-lua m-5 text-sm overflow-x-auto">--bad drip
+--alexthescott
+--8/25/21
+
+p={8,136,130,11,139,131,12,140,129}
+pal(p,1)
+global_color=1
+global_tick=1
+
+function burn()
+	-- drip pixels, fade color
+	-- respect even/odd y pos
+	for p=0,2024do
+		x=rnd(128)\1
+		y=rnd(128)\1
+		pc=pget(x,y)
+		npc=pget(x,y+2)
+		if y%2==0 then
+			d=2
+		else 
+			d=-2
+		end
+		if pc!=0 and pc==npc then
+			if pc%3!=0 then
+				if rnd(10)\1==0 then
+					pset(x,y,pc+1)
+				else
+					pset(x,y,pc)
+				end
+			end
+			pset(x,y+d,pc)
+		elseif pc!=0 then
+			pset(x,y+d,pc)
+		end
+	end
+end
+
+function add_brush()
+	local b={}
+	
+	b.x=0
+	if global_tick==1 then
+		b.y=0
+	else
+		b.y=127
+	end
+	b.c=global_color
+	b.v=1
+	
+	b.update=function(slf)
+	 slf.x+=slf.v
+	end
+	
+	b.set_c=function(slf,c)
+		slf.c=c
+	end
+	
+	b.draw=function(slf)
+		pset(slf.x,slf.y,slf.c)
+	end
+	
+	b.destroy=function(slf)
+		if slf.x>=128 then
+			del(brushes,slf)
+		end
+	end
+	
+	global_tick+=1
+	global_tick%=2
+	
+	add(brushes,b)
+end
+
+brushes={}
+add_brush()
+add_brush()
+
+cls()
+::♥::
+if t()<2 then
+	print("bad drip",48,64,1)
+else
+	burn()
+	
+	if t()%5==0 then
+		add_brush()
+		add_brush()
+	end
+	
+	if t()%10==0 then
+		for b in all(brushes) do
+			b:set_c(global_color)
+		end
+		global_color+=3
+		global_color%=9
+	end
+	
+	for b in all(brushes) do
+		b:draw()
+		b:update()
+		b:destroy()
+	end
+end
+
+flip()
+goto ♥
+</code></pre>
+      </div>
+    </body></html>
+    

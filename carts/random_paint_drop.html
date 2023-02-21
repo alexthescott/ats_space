@@ -1,0 +1,125 @@
+<!doctype html>
+    <html>
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D3GB85S48Y');
+      </script>
+
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <link href="../output.css" rel="stylesheet">
+      <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+      <title>alexthescott.random_paint_drop</title>
+    </head>
+
+    <body class="mt-2 bg-black text-white font-sans">
+      <div class="flex flex-row justify-left">
+        <a href="../pages/art.html" class="ml-4 nav_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg></a>
+        <h1 class="m-5 text-3xl">alexthescott.random paint drop</h1>
+      </div>
+
+      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
+      <iframe src="../res/carts/html/random_paint_drop.html" height="512" width="512" class="m-5 sm:items-start items-center"></iframe>
+      
+      <pre><code class="language-lua m-5 text-sm overflow-x-auto">-- random paint drop
+-- alexthescott
+-- 9/27/21 8:38am
+
+-- new seed every day of the year
+srand(31*stat(81)+stat(82))
+
+function new_wave(d,c)
+	w={}
+	w.init=function(self)
+		for p=1,128 do
+			add(self.points,p)
+		end
+	end
+	w.c=c
+	w.d=d
+	w.points={}
+	w.step=0
+	w:init()
+	
+	w.draw=function(self)
+		if self.d==0 then
+			for p in all(self.points) do
+				pset(p,self.step,self.c)
+			end
+		elseif self.d==1 then
+			for p in all(self.points) do
+				pset(128-self.step,p,self.c)
+			end
+		elseif self.d==2 then
+			for p in all(self.points) do
+				pset(p,128-self.step,self.c)
+			end
+		elseif self.d==3 then
+			for p in all(self.points) do
+				pset(self.step,p,self.c)
+			end
+		end
+	end
+	
+	w.update=function(self)
+		move=1+(.75*(#self.points/32)\1)
+		
+		if #self.points>=move then
+			for i=1,move do
+				self.step+=1
+				rnd_index=rnd(#self.points)\1
+				del(self.points,self.points[rnd_index])
+				self:draw()
+			end
+		end
+	end
+	
+	return w
+end
+
+month=stat(81)
+day=stat(82)
+col_count=1
+col=7
+wave=new_wave(rnd(4)\1,col)
+
+_set_fps(60)
+
+cls()
+::♥::
+if t()<2 then
+	print("random paint drop",30,59,7)
+	print(month.."/"..day,55,65)
+else
+	wave:draw()
+	wave:update()
+	
+	if #wave.points<=1 then
+		local d=wave.d
+		d+=1
+		d%=4
+		col_count+=1
+		if col_count>=4 then
+			col_count=1
+			col= col==7 and 0 or 7
+		end
+		wave=new_wave(d,col)
+	end
+end
+flip()
+goto ♥
+</code></pre>
+      </div>
+    </body></html>
+    

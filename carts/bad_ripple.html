@@ -1,0 +1,140 @@
+<!doctype html>
+    <html>
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D3GB85S48Y');
+      </script>
+
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <link href="../output.css" rel="stylesheet">
+      <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+      <title>alexthescott.bad_ripple</title>
+    </head>
+
+    <body class="mt-2 bg-black text-white font-sans">
+      <div class="flex flex-row justify-left">
+        <a href="../pages/art.html" class="ml-4 nav_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg></a>
+        <h1 class="m-5 text-3xl">alexthescott.bad ripple</h1>
+      </div>
+
+      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
+      <iframe src="../res/carts/html/bad_ripple.html" height="512" width="512" class="m-5 sm:items-start items-center"></iframe>
+      
+      <pre><code class="language-lua m-5 text-sm overflow-x-auto">-- bad ripple
+-- alexthescott
+-- 22/4/18
+
+-- ty to @aebrer for this maths
+rng = stat(6)
+if rng == "" then
+rng=tostr(rnd(-1)\1)..","..tostr(1+rnd(3)\1)..","..tostr(1+rnd(15)\1)..","..tostr(rnd())..","..tostr(rnd(15)\1)..","..tostr(rnd(15)\1)..","..tostr(rnd(5)\1)
+end
+rng_vals = {}
+c_num = ""
+for i=1,#rng do
+ if sub(rng,i,i) != "," then
+  c_num = c_num..sub(rng,i,i)
+ else 
+  add(rng_vals,tonum(c_num))
+  c_num = ""
+ end
+end
+
+srand(rng_vals[1])
+
+-- bad weather map
+p1={7,6,135,10,138,11,139,3,131,12,140,1,129,130,128,0}
+-- bad heat
+p2={7,135,10,9,15,143,142,137,14,136,8,2,130,133,128,0}
+-- bad tropic
+p3={7,15,143,142,14,8,136,137,9,10,135,138,11,139,12,140}
+
+p={p1,p2,p3}
+c=p[rng_vals[2]]
+pal(c,1)
+
+function forward()
+	v=c[1]
+	del(c,v)
+	c[#c+1]=v
+	pal(c,1)
+end
+
+for i=1,rng_vals[3] do
+	forward()
+end
+
+t=rng_vals[4]
+f=0
+
+v1=4+rng_vals[5]
+v2=4+rng_vals[6]
+vd=rng_vals[7]
+
+cls(6)
+_set_fps(60)
+::♥::
+
+for i=0,380 do
+	x=rnd(128)\1
+	y=rnd(128)\1
+	s=4*sin(t/3)
+	v=(sin(x/128)+
+		cos(y/256)+
+		cos(t/(x+y)/280)+
+		sin(t+(x+y)/128)+
+		sin(-t+s+sqrt((x/v1-16+v1)^2+(y/v2-16+v2)^2)))+
+		sin(-t+s+sqrt(x*y+y*x)/8)
+	pset(x,y,(6+v)/.75)
+end
+
+for d=0,32 do
+	x=rnd(128)
+	y=rnd(128)
+	a=atan2((64-x)/128,(64-y)/128)
+	x2=x-cos(a)
+	y2=y-sin(a)
+	if vd==0 then
+		v=pget(x,y)
+	elseif vd==1 then
+		v=pget(x-1,y)
+	elseif vd==2 then
+		v=pget(x+1,y)
+	elseif vd==3 then
+		v=pget(x,y+1)
+	elseif vd==4 then
+		v=pget(x,y-1)
+	end
+	circ(x,y,1,v)
+end
+
+t+=0.001
+
+if f>=128 then
+	if f>=130 then
+		f=0
+	else
+		srand(1)
+	end
+end
+
+f+=1
+
+flip()
+goto ♥
+</code></pre>
+      </div>
+    </body></html>
+    
