@@ -63,6 +63,7 @@ def create_cart_pages(carts, cart_image_urls):
       with open("src/res/carts/html/{}.html".format(cart_name), 'wb') as handler:
         handler.write(raw_cart_html)
 
+    progress(i, len(cart_image_urls), "{}/README.md".format(cart_name))
     raw_cart_readme = requests.get(cart_readme).text.split("```")[-2].replace(" Lua\n", "")
 
     # create cart html page
@@ -86,7 +87,7 @@ def create_cart_pages(carts, cart_image_urls):
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
       <link href="../output.css" rel="stylesheet">
       <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
-      <title>alexthescott.""" + cart_name + """</title>
+      <title>alexthescott.""" + cart_name.replace("_", " ") + """</title>
     </head>
 
     <body class="mt-2 bg-black text-white font-sans">
@@ -98,10 +99,13 @@ def create_cart_pages(carts, cart_image_urls):
         <h1 class="m-5 text-3xl">alexthescott.""" + cart_name.replace("_", " ") + """</h1>
       </div>
 
-      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
-      <iframe src="../res/carts/html/""" + "{}.html".format(cart_name) + """\" height=\"512\" width=\"512\" class="m-5 sm:items-start items-center"></iframe>
-      
-      <pre><code class="language-lua m-5 text-sm overflow-x-auto">""" + raw_cart_readme +  """</code></pre>
+      <div class="sm:text-left flex flex-col m-4 sm:flex-row mt-0">
+        <div class="flex items-center"> 
+          <iframe src="../res/carts/html/""" + "{}.html".format(cart_name) + """\" height=\"512\" width=\"512\" class="m-5 my-auto"></iframe>
+        </div>
+        <div class="flex items-start overflow-x-auto">
+          <pre><code class="language-lua m-4 text-sm">""" + raw_cart_readme +  """</code></pre>
+        </div>
       </div>
     </body></html>
     """

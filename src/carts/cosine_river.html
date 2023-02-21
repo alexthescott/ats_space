@@ -17,7 +17,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
       <link href="../output.css" rel="stylesheet">
       <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
-      <title>alexthescott.cosine_river</title>
+      <title>alexthescott.cosine river</title>
     </head>
 
     <body class="mt-2 bg-black text-white font-sans">
@@ -29,10 +29,12 @@
         <h1 class="m-5 text-3xl">alexthescott.cosine river</h1>
       </div>
 
-      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
-      <iframe src="../res/carts/html/cosine_river.html" height="512" width="512" class="m-5 sm:items-start items-center"></iframe>
-      
-      <pre><code class="language-lua m-5 text-sm overflow-x-auto">-- cosine river
+      <div class="sm:text-left flex flex-col m-4 sm:flex-row mt-0">
+        <div class="flex items-center"> 
+          <iframe src="../res/carts/html/cosine_river.html" height="512" width="512" class="m-5 my-auto"></iframe>
+        </div>
+        <div class="flex items-start overflow-x-auto">
+          <pre><code class="language-lua m-4 text-sm">-- cosine river
 -- alexthescott
 -- 22/1/17
 
@@ -45,6 +47,7 @@ pset(e[1],e[2],e[3])
 e[1]+=0.5e[2]+=(c(o+e[2]/a)-c(o+e[1]/a))/3if(e[1]>=a)del(p,e)
 x,y=r(a),r(a);pset(x,y,max(pget(x,y)-1,0))end;f+=1;goto _
 </code></pre>
+        </div>
       </div>
     </body></html>
     

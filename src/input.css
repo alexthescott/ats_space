@@ -13,8 +13,8 @@
     @apply hover:animate-pulse
   }
   .pico_8_canvas {
-    width: min(100vh, 100vw);
-    height: min(100vh, 100vw);
+    width: min(128vh, 128vw);
+    height: min(128vh, 128vw);
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-optimize-contrast;

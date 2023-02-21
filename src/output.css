@@ -594,6 +594,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -844,10 +849,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:items-start {
     align-items: flex-start;
-  }
-
-  .sm\:items-center {
-    align-items: center;
   }
 
   .sm\:text-left {
