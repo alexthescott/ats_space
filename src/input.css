@@ -12,4 +12,18 @@
   .nav_icon{
     @apply hover:animate-pulse
   }
+  .pico_8_canvas {
+    width: min(100vh, 100vw);
+    height: min(100vh, 100vw);
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    border: 0;
+  }
+  .canvas-wrapper {
+    text-align: center;
+  }
 }

@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
+    "tailwind-highlightjs": "^2.0.1",
     "typed.js": "^2.0.12"
   },
   "scripts": {

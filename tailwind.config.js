@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}", "./src/**/**/*.{html,js}"],
+  safelist: [{
+    pattern: /hljs+/,
+  }],
   theme: {
     extend: {
       transitionDuration: {
@@ -7,6 +10,9 @@ module.exports = {
         '900': '900ms',
       }
     },
+    hljs: {
+      theme: 'tomorrow-night-bright',
+    },
   },
-  plugins: [],
+  plugins: [require('tailwind-highlightjs')],
 }

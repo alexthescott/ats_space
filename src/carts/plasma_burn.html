@@ -1,0 +1,69 @@
+<!doctype html>
+    <html>
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3GB85S48Y"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D3GB85S48Y');
+      </script>
+
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <link href="../output.css" rel="stylesheet">
+      <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+      <title>alexthescott.plasma_burn</title>
+    </head>
+
+    <body class="mt-2 bg-black text-white font-sans">
+      <div class="flex flex-row justify-left">
+        <a href="../pages/art.html" class="ml-4 nav_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg></a>
+        <h1 class="m-5 text-3xl">alexthescott.plasma burn</h1>
+      </div>
+
+      <div class="m-4 items-start sm:text-left flex flex-col sm:flex-row mt-0 text-justify">
+      <iframe src="../res/carts/html/plasma_burn.html" height="512" width="512" class="m-5 sm:items-start items-center"></iframe>
+      
+      <pre><code class="language-lua m-5 text-sm overflow-x-auto">-- plasma burn
+-- alexthescott
+-- 1/27/21
+
+pal({[0]=12,140,129,1,133,130,2,136,8,137,142,14,143,15,135,7},1)
+
+-- new seed every day of the year 
+srand(31*stat(81)+stat(82)) 
+
+cls()
+_set_fps(60)
+x_off=rnd()
+y_off=rnd()
+f1=1+rnd()
+f2=4+rnd(2)
+f3=2+rnd(1)
+::♥::
+for i=0,542 do
+	x=rnd(128)\1
+	y=rnd(128)\1
+	c=f1*2*sqrt(2)
+	j2=3.14*cos(f3*x/2)*3.14*sin(f2)
+	j3=3.14*sin(f2*y/2)*3.14*cos(f2)
+	v1=(c*sin(x/2048*j2+x_off+t()/96))
+	v2=(c*cos(y/2048*j3+y_off+t()/512))
+	v1+=(x-64)/32
+	v2+=(y-64)/32
+	pset(x,y,((v1*v2)/2))
+end
+flip()
+goto ♥
+</code></pre>
+      </div>
+    </body></html>
+    
