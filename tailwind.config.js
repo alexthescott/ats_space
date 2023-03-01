@@ -8,6 +8,7 @@ module.exports = {
       transitionDuration: {
         '800': '800ms',
         '900': '900ms',
+        '1200': '1200ms'
       }
     },
     hljs: {
