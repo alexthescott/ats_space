@@ -650,10 +650,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
-.h-7 {
-  height: 1.75rem;
-}
-
 .w-screen {
   width: 100vw;
 }
@@ -670,12 +666,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 36rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
+}
+
+.max-w-\[1100px\] {
+  max-width: 1100px;
+}
+
+.max-w-\[1050px\] {
+  max-width: 1050px;
+}
+
+.max-w-\[1030px\] {
+  max-width: 1030px;
+}
+
+.max-w-\[1040px\] {
+  max-width: 1040px;
 }
 
 .shrink {
@@ -728,6 +756,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.375rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -743,6 +775,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .text-justify {
