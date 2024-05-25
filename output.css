@@ -678,6 +678,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 56rem;
 }
 
+.max-w-\[640px\] {
+  max-width: 640px;
+}
+
 .shrink {
   flex-shrink: 1;
 }
