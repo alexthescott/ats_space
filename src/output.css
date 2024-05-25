@@ -678,6 +678,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 56rem;
 }
 
+.max-w-\[640px\] {
+  max-width: 640px;
+}
+
 .shrink {
   flex-shrink: 1;
 }
@@ -824,6 +828,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-1000 {
   transition-duration: 1000ms;
+}
+
+.duration-1200 {
+  transition-duration: 1200ms;
 }
 
 .ease-in {
