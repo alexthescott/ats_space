@@ -86,7 +86,7 @@ def create_cart_pages(carts, cart_image_urls):
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
       <link href="../output.css" rel="stylesheet">
-      <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+      <link rel="icon" href="../res/images/logo192.png" rel="image/x-icon">
       <title>alexthescott.""" + cart_name.replace("_", " ") + """</title>
     </head>
 
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../output.css" rel="stylesheet">
-    <link rel="icon" href="../res/logo192.png" rel="image/x-icon">
+    <link rel="icon" href="../res/images/logo192.png" rel="image/x-icon">
     <title>alexthescott.art</title>
   </head>
 
