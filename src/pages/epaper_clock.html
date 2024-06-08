@@ -30,68 +30,89 @@
     <div class="m-4 sm:items-start flex flex-col sm:flex-row justify-center mt-0">
         <div class="m-4 mt-0 max-w-3xl justify-center">
             <h2 class="font-bold text-2xl m-4">Final Result:</h2>
+            <h2 class="font-bold text-lg m-2">TLDR: Desktop ePaper Raspberry Pi Clock designed to help read/see my
+                Spotify listening info</h2>
             <div class="flex flex-row m-4">
                 <div class="relative flex flex-col mx-2 my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
                     <div
                         class="relative m-3 bg-neutral-800 overflow-hidden shadow-lg bg-clip-border rounded-xl shadow-blue-gray-500/40">
-                        <img src="../res/images/spotify_epaper_preview.png" style="width: 100%; height: 100%; object-fit: scale-down;" />
+                        <img src="../res/images/spotify_epaper_preview.png"
+                            style="width: 100%; height: 100%; object-fit: scale-down;" />
                     </div>
                     <p class="m-2 text-xs">Single User + Detailed Weather</p>
                 </div>
-                <div class="relative flex flex-col mx-auto my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
+                <div class="relative flex flex-col mx-2 my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
                     <div
                         class="relative m-3 bg-neutral-800 overflow-hidden shadow-lg bg-clip-border rounded-xl shadow-blue-gray-500/40">
-                        <img src="../res/images/spotify_epaper_preview2.png" style="width: 100%; height: 100%; object-fit: scale-down;" />
+                        <img src="../res/images/spotify_epaper_preview2.png"
+                            style="width: 100%; height: 100%; object-fit: scale-down;" />
                     </div>
-                        <p class="m-2 text-xs">Two Spotify User's Listening information on the 4.2in WaveShare ePaper Display</p>
+                    <p class="m-2 text-xs">Two Spotify User's Listening information on the 4.2in WaveShare ePaper
+                        Display</p>
                 </div>
             </div>
-            <h2 class="font-bold text-2xl">Motivation:</h2>
-            <p>
-                Around 2018, I stumbled across and was immediately enamored by <a href="https://ashcroft.dev/" class="hyperlink">Jon Ashcroft</a>'s
-                <a href="https://ashcroft.dev/blog/now-playing-screen-spotify-raspberry-pi-es6/" class="hyperlink"> 'Now Playing'</a> Spotify Frame project
-                which displays the album art and track information on a small LCD display connected to a Raspberry Pi. As a music and computer nerd, I knew 
-                I wanted to build something similar to permanently sit on my desk. 
-            </p>
-            <div class="relative flex flex-col mx-auto my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
-                <div class="relative m-3 bg-neutral-800 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                    <img src="../res/images/jon_now_playing_project.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
+            <h2 class="font-bold text-2xl m-4">Motivation:</h2>
+            <div class="flex flex-row m-4">
+                <div class="relative flex flex-col mx-2 my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
+                    <div
+                        class="relative m-3 bg-neutral-800 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+                        <img src="../res/images/jon_now_playing_project.jpg"
+                            style="width: 100%; height: 100%; object-fit: scale-down;" />
+                    </div>
                     <p class="m-2 text-xs">From Jon Ashcroft's Now Playing blog post</p>
                 </div>
+                <div class="relative flex flex-col mx-2 my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
+                    <div
+                        class="relative m-3 bg-neutral-800 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+                        <img src="../res/images/brett_upnext_project.jpg"
+                            style="width: 100%; height: 100%; object-fit: scale-down;" />
+                    </div>
+                    <p class="m-2 text-xs">From Brett van Zuiden's UpNext blog post</p>
+                </div>
             </div>
-            <p>There are benefits to using LCD screens for brightness, color, and refresh rate all of which are great fits for his 'web first' approach of 
-                building and launching a website in kiosk mode. Although I do eventually structure my ePaper Spotify clock differently,
+            <p>
+                Around 2018, I stumbled across and was immediately enamored by <a href="https://ashcroft.dev/"
+                    class="hyperlink">Jon Ashcroft</a>'s
+                <a href="https://ashcroft.dev/blog/now-playing-screen-spotify-raspberry-pi-es6/" class="hyperlink"> 'Now
+                    Playing'</a> Spotify Frame project
+                which displays the album art and track information on a small LCD display connected to a Raspberry Pi.
+                As a music and computer nerd, I knew
+                I wanted to build something similar to permanently sit on my desk.
+            </p>
+
+            <p>There are benefits to using LCD screens for brightness, color, and refresh rate all of which are great
+                fits for his 'web first' approach of
+                building and launching a website in kiosk mode. Although I do eventually structure my ePaper Spotify
+                clock differently,
                 Jon's Now Playing project serves as the most direct inspiration for this project.
             </p>
             <br>
             <p>
-                In contrast to LCD displays, ePaper displays like those found in Amazon's Kindle are far more power efficient at the cost of low refresh rates, poor color 
-                replication, high latency, and greater material cost. In researching similar projects, I found <a href="https://brettcvz.com/" class="hyperlink">Brett van Zuiden</a>'s 
+                In contrast to LCD displays, ePaper displays like those found in Amazon's Kindle are far more power
+                efficient at the cost of low refresh rates, poor color
+                replication, high latency, and greater material cost. In researching similar projects, I found <a
+                    href="https://brettcvz.com/" class="hyperlink">Brett van Zuiden</a>'s
                 <a href="https://brettcvz.com/projects/6-upnext" class="hyperlink"">UpNext project</a> from March of 2020.</p>
             </p>
-            <div class="relative flex flex-col mx-auto my-3 bg-neutral-900 shadow-md bg-clip-border rounded-xl w-96">
-                <div
-                    class="relative m-3 bg-neutral-800 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                    <img src="../res/images/brett_upnext_project.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
-                    <p class="m-2 text-xs">From Brett van Zuiden's UpNext blog post</p>
-                </div>
-            </div>
-            <p>UpNext utilizes a WaveShare 4.2inch ePaper display, Raspberry Pi and Google Calendar API to create a "subtle, unobtrusive digital desktop calendar" which "does one thing
-            and does it well." As a fellow appreciator of single use gadgets, I am radically aligned with Brett's project description and screen choice and I knew that whatever I made, it must follow
-            the same basic design principles and screen.</p>
-            <br/>
-            <h2 class="font-bold text-2xl">Materials:</h2>
-            <p>
-                Filler Text
-            </p>
-            <h2 class="font-bold text-2xl">Challenges:</h2>
-            <p>
-                Filler Text
-            </p>
-            <h2 class="font-bold text-2xl">Wrap Up:</h2>
-            <p>
-                Filler Text
-            </p>
+
+            <p>UpNext utilizes a WaveShare 4.2inch ePaper display, Raspberry Pi and Google Calendar API to create a "
+                    subtle, unobtrusive digital desktop calendar" which "does one thing
+            and does it well." As a fellow appreciator of single use gadgets, I am radically aligned with Brett's
+                    project description and screen choice and I knew that whatever I made, it must follow the same basic
+                    design principles and screen.</p>
+                    <br />
+                    <h2 class="font-bold text-2xl">Materials:</h2>
+                    <p>
+                        Filler Text
+                    </p>
+                    <h2 class="font-bold text-2xl">Challenges:</h2>
+                    <p>
+                        Filler Text
+                    </p>
+                    <h2 class="font-bold text-2xl">Wrap Up:</h2>
+                    <p>
+                        Filler Text
+                    </p>
         </div>
     </div>
 </body>
