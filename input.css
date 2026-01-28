@@ -23,6 +23,14 @@
     -ms-interpolation-mode: nearest-neighbor;
     border: 0;
   }
+  .pico_8_iframe {
+    width: 100%;
+    max-width: 512px;
+    aspect-ratio: 1 / 1;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
   .canvas-wrapper {
     text-align: center;
   }
