@@ -37,10 +37,11 @@ def get_cart_image_tags(cart_image_urls, carts):
   for i, cart in enumerate(cart_image_urls):
     cart_url = "{}/{}.png".format(cart,cart.split("/")[-1])
     cart_name = cart_url.split("/")[-1]
-    img_tag = "<img class=\"h-auto\" loading=\"lazy\" src=\"{}\"></img>\n".format("../res/carts/images/{}".format(cart_name)) if HOST_LOCAL_CARTS else "<img loading=\"lazy\" src=\"{}\"></img>\n".format(cart_url)
+    alt_text = cart_name[:cart_name.index(".")].replace("_", " ").title()
+    img_tag = "<img class=\"h-auto\" loading=\"lazy\" src=\"{}\" alt=\"{}\"></img>\n".format("../res/carts/images/{}".format(cart_name), alt_text) if HOST_LOCAL_CARTS else "<img loading=\"lazy\" src=\"{}\" alt=\"{}\"></img>\n".format(cart_url, alt_text)
     # load github README
     # link_tag = "<a href=\"{}#readme\">{}</a>".format(carts[i], img_tag)
-    link_tag = "<a href=\"../carts/{}.html\">{}</a>".format(cart_name[:cart_name.index(".")], img_tag)
+    link_tag = "<a href=\"../carts/{}\">{}</a>".format(cart_name[:cart_name.index(".")], img_tag)
     cart_images.append(link_tag)
   return cart_images
 
@@ -84,7 +85,17 @@ def create_cart_pages(carts, cart_image_urls):
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
+      <meta property="og:title" content="alexthescott.""" + cart_name.replace("_", " ") + """">
+      <meta property="og:description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
+      <meta property="og:image" content="https://alexthescott.space/res/carts/images/""" + cart_name + """.png">
+      <meta property="og:url" content="https://alexthescott.space/carts/""" + cart_name + """>
+      <meta property="og:type" content="website">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="alexthescott.""" + cart_name.replace("_", " ") + """">
+      <meta name="twitter:description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
+      <meta name="twitter:image" content="https://alexthescott.space/res/carts/images/""" + cart_name + """.png">
       <link href="../output.css" rel="stylesheet">
       <link rel="icon" href="../res/favicon-32.png" type="image/png">
       <title>alexthescott.""" + cart_name.replace("_", " ") + """</title>
@@ -92,7 +103,7 @@ def create_cart_pages(carts, cart_image_urls):
 
     <body class="mt-2 bg-black text-white font-sans">
       <div class="flex flex-row justify-left">
-        <a href="../pages/art.html" class="ml-4 nav_icon" aria-label="Back to art gallery">
+        <a href="../pages/art" class="ml-4 nav_icon" aria-label="Back to art gallery">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg></a>
@@ -155,13 +166,13 @@ if __name__ == "__main__":
 
   <body class="mt-2 bg-black text-white font-sans">
     <div class="flex flex-row justify-left">
-      <a href="../index.html" class="ml-4 nav_icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <a href="../" class="ml-4 nav_icon" aria-label="Back to home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg></a>
       <h1 class="m-5 text-3xl">alexthescott.art</h1>
     </div>
-    <div class="m-4 max-w-4xl sm:items-start items-center grid grid-cols-4 sm:grid-cols-5 gap-4 sm:flex-row mt-0 text-justify">
+    <div class="m-4 max-w-4xl sm:items-start items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:flex-row mt-0 text-justify">
   """ + cart_images + """
     </div>
   </body>
