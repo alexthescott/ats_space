@@ -84,7 +84,7 @@ def create_cart_pages(carts, cart_image_urls):
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="../output.css" rel="stylesheet">
       <link rel="icon" href="../res/favicon-32.png" type="image/png">
       <title>alexthescott.""" + cart_name.replace("_", " ") + """</title>
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         </svg></a>
       <h1 class="m-5 text-3xl">alexthescott.art</h1>
     </div>
-    <div class="m-4 max-w-4xl sm:items-start items-center grid grid-cols-4 sm:grid-cols-5 gap-4 sm:flex-row mt-0 text-justify">
+    <div class="m-4 max-w-4xl sm:items-start items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:flex-row mt-0 text-justify">
   """ + cart_images + """
     </div>
   </body>
