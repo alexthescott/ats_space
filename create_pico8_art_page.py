@@ -37,7 +37,8 @@ def get_cart_image_tags(cart_image_urls, carts):
   for i, cart in enumerate(cart_image_urls):
     cart_url = "{}/{}.png".format(cart,cart.split("/")[-1])
     cart_name = cart_url.split("/")[-1]
-    img_tag = "<img class=\"h-auto\" loading=\"lazy\" src=\"{}\"></img>\n".format("../res/carts/images/{}".format(cart_name)) if HOST_LOCAL_CARTS else "<img loading=\"lazy\" src=\"{}\"></img>\n".format(cart_url)
+    alt_text = cart_name[:cart_name.index(".")].replace("_", " ").title()
+    img_tag = "<img class=\"h-auto\" loading=\"lazy\" src=\"{}\" alt=\"{}\"></img>\n".format("../res/carts/images/{}".format(cart_name), alt_text) if HOST_LOCAL_CARTS else "<img loading=\"lazy\" src=\"{}\" alt=\"{}\"></img>\n".format(cart_url, alt_text)
     # load github README
     # link_tag = "<a href=\"{}#readme\">{}</a>".format(carts[i], img_tag)
     link_tag = "<a href=\"../carts/{}.html\">{}</a>".format(cart_name[:cart_name.index(".")], img_tag)
@@ -165,8 +166,8 @@ if __name__ == "__main__":
 
   <body class="mt-2 bg-black text-white font-sans">
     <div class="flex flex-row justify-left">
-      <a href="../index.html" class="ml-4 nav_icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <a href="../index.html" class="ml-4 nav_icon" aria-label="Back to home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg></a>
       <h1 class="m-5 text-3xl">alexthescott.art</h1>
