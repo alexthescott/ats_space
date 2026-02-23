@@ -85,6 +85,16 @@ def create_cart_pages(carts, cart_image_urls):
       <script>hljs.highlightAll();</script>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
+      <meta property="og:title" content="alexthescott.""" + cart_name.replace("_", " ") + """">
+      <meta property="og:description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
+      <meta property="og:image" content="https://alexthescott.space/res/carts/images/""" + cart_name + """.png">
+      <meta property="og:url" content="https://alexthescott.space/carts/""" + cart_name + """.html">
+      <meta property="og:type" content="website">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="alexthescott.""" + cart_name.replace("_", " ") + """">
+      <meta name="twitter:description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
+      <meta name="twitter:image" content="https://alexthescott.space/res/carts/images/""" + cart_name + """.png">
       <link href="../output.css" rel="stylesheet">
       <link rel="icon" href="../res/favicon-32.png" type="image/png">
       <title>alexthescott.""" + cart_name.replace("_", " ") + """</title>
