@@ -41,7 +41,7 @@ def get_cart_image_tags(cart_image_urls, carts):
     img_tag = "<img class=\"h-auto\" loading=\"lazy\" src=\"{}\" alt=\"{}\"></img>\n".format("../res/carts/images/{}".format(cart_name), alt_text) if HOST_LOCAL_CARTS else "<img loading=\"lazy\" src=\"{}\" alt=\"{}\"></img>\n".format(cart_url, alt_text)
     # load github README
     # link_tag = "<a href=\"{}#readme\">{}</a>".format(carts[i], img_tag)
-    link_tag = "<a href=\"../carts/{}.html\">{}</a>".format(cart_name[:cart_name.index(".")], img_tag)
+    link_tag = "<a href=\"../carts/{}\">{}</a>".format(cart_name[:cart_name.index(".")], img_tag)
     cart_images.append(link_tag)
   return cart_images
 
@@ -90,7 +90,7 @@ def create_cart_pages(carts, cart_image_urls):
       <meta property="og:title" content="alexthescott.""" + cart_name.replace("_", " ") + """">
       <meta property="og:description" content=\"""" + cart_name.replace("_", " ") + """ - Pico-8">
       <meta property="og:image" content="https://alexthescott.space/res/carts/images/""" + cart_name + """.png">
-      <meta property="og:url" content="https://alexthescott.space/carts/""" + cart_name + """.html">
+      <meta property="og:url" content="https://alexthescott.space/carts/""" + cart_name + """>
       <meta property="og:type" content="website">
       <meta name="twitter:card" content="summary">
       <meta name="twitter:title" content="alexthescott.""" + cart_name.replace("_", " ") + """">
@@ -103,7 +103,7 @@ def create_cart_pages(carts, cart_image_urls):
 
     <body class="mt-2 bg-black text-white font-sans">
       <div class="flex flex-row justify-left">
-        <a href="../pages/art.html" class="ml-4 nav_icon" aria-label="Back to art gallery">
+        <a href="../pages/art" class="ml-4 nav_icon" aria-label="Back to art gallery">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg></a>
@@ -166,7 +166,7 @@ if __name__ == "__main__":
 
   <body class="mt-2 bg-black text-white font-sans">
     <div class="flex flex-row justify-left">
-      <a href="../index.html" class="ml-4 nav_icon" aria-label="Back to home">
+      <a href="../" class="ml-4 nav_icon" aria-label="Back to home">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg></a>
