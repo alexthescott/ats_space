@@ -8,7 +8,7 @@
     "typed.js": "^2.0.12"
   },
   "scripts": {
-    "deploy": "echo 'alexthescott.com' > ./src/CNAME && gh-pages -d src",
+    "deploy": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify && echo 'alexthescott.com' > ./src/CNAME && gh-pages -d src",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   }
 }
